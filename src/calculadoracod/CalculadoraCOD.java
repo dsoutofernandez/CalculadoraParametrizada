@@ -6,6 +6,8 @@
 
 package calculadoracod;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author dsoutofernandez
@@ -34,12 +36,19 @@ public class CalculadoraCOD {
         
         }else if( cont.operacion.equals("resta")){
         
+            cont.resultado = cont.num1 - cont.num2;
         
         }else if(cont.operacion.equals("multiplicacion")){
         
+            cont.resultado = cont.num1 * cont.num2;
         
         }else if (cont.operacion.equals("division")){
         
+            cont.resultado = cont.num1 / cont.num2;
+        
+        }else{
+        
+            JOptionPane.showMessageDialog(null, "Introduzca solo: \n suma | resta | multiplicacion | division");
         
         }
         
