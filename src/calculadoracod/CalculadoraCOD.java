@@ -19,14 +19,19 @@ public class CalculadoraCOD {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Modelo mod = new Modelo();
+        Vista vis = new Vista();
         
+        mod.setNum1(4);
+        mod.setNum2(8);
+        mod.setOperacion("suma");
         
-        
+        Vista.imprimir(realizaOperacion(mod));
         
         
     }
     
-    public float realizaOperacion(Modelo cont){
+    public static float realizaOperacion(Modelo cont){
     
         float resultado=0;
         
@@ -51,8 +56,6 @@ public class CalculadoraCOD {
             JOptionPane.showMessageDialog(null, "Introduzca solo: \n suma | resta | multiplicacion | division");
         
         }
-        
-        
     
         return resultado;
     }
