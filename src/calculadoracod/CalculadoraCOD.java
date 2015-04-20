@@ -20,44 +20,76 @@ public class CalculadoraCOD {
     public static void main(String[] args) {
         // TODO code application logic here
         Modelo mod = new Modelo();
-        Vista vis = new Vista();
+     
+        String num1 = JOptionPane.showInputDialog("Itroduzca el primer operando:");
+        String num2  =JOptionPane.showInputDialog("Introduzca el segunda operando:");
         
-        mod.setNum1(4);
-        mod.setNum2(8);
-        mod.setOperacion("suma");
+        mod.setNum1(Float.parseFloat(num1));
+        mod.setNum2(Float.parseFloat(num2));
+        String op = JOptionPane.showInputDialog("Introduzca la operacion que desea realizar: \n suma | resta | multiplicacion | division");
         
-        Vista.imprimir(realizaOperacion(mod));
+        if ( op.equals("suma")){
         
+            mod.setOperacion("suma");
+
         
-    }
-    
-    public static float realizaOperacion(Modelo cont){
-    
-        float resultado=0;
+        }else if( op.equals("resta")){
         
-        if ( cont.operacion.equals("suma")){
+            mod.setOperacion("resta");
+
         
-            cont.resultado = cont.num1 + cont.num2;
+        }else if(op.equals("multiplicacion")){
+
+            mod.setOperacion("multiplicacion");
+
         
-        }else if( cont.operacion.equals("resta")){
-        
-            cont.resultado = cont.num1 - cont.num2;
-        
-        }else if(cont.operacion.equals("multiplicacion")){
-        
-            cont.resultado = cont.num1 * cont.num2;
-        
-        }else if (cont.operacion.equals("division")){
-        
-            cont.resultado = cont.num1 / cont.num2;
+        }else if (op.equals("division")){
+
+             mod.setOperacion("division");
         
         }else{
         
             JOptionPane.showMessageDialog(null, "Introduzca solo: \n suma | resta | multiplicacion | division");
+            
+        }
         
+
+        
+        realizaOperacion(mod);
+        Vista.imprimir(mod);
+        
+    }
+    
+    public static void realizaOperacion(Modelo cont){
+    
+        
+        if ( cont.operacion.equals("suma")){
+        
+            cont.resultado = cont.num1 + cont.num2;
+
+        
+        }else if( cont.operacion.equals("resta")){
+        
+            cont.resultado = cont.num1 - cont.num2;
+
+        
+        }else if(cont.operacion.equals("multiplicacion")){
+        
+            cont.resultado = cont.num1 * cont.num2;
+
+        
+        }else if (cont.operacion.equals("division")){
+        
+            cont.resultado = cont.num1 / cont.num2;
+
+        
+        }else{
+        
+            JOptionPane.showMessageDialog(null, "Introduzca solo: \n suma | resta | multiplicacion | division");
+            
         }
     
-        return resultado;
+        
     }
     
 }

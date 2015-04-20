@@ -6,10 +6,21 @@
 
 package calculadoracod;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author dsoutofernandez
  */
 public class Vista {
+
+    
+    public static void imprimir(Modelo cont){
+    
+        JOptionPane.showMessageDialog(null, "El resultado es: " + cont.resultado);
+    
+    }
+    
+    
     
 }
