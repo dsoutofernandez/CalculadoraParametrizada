@@ -21,10 +21,6 @@ import org.junit.runners.Parameterized;
  * @author dsoutofernandez
  */
 
-    
-    
-
-
 @RunWith(Parameterized.class)
 public class CalculadoraCODParametrizadoTest {
     
@@ -49,7 +45,10 @@ public class CalculadoraCODParametrizadoTest {
    public static Collection primeNumbers() {
       return Arrays.asList(new Object[][] {
          { new Modelo (2,2, "suma"),4},
-         { new Modelo (3,1, "resta"),2}
+         { new Modelo (3,1, "resta"),2},
+         { new Modelo (3,1, "multiplicacion"),3},
+         { new Modelo (3,1, "division"),5}
+              
          
       });
    }
