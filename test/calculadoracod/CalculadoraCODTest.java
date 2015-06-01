@@ -54,7 +54,7 @@ public class CalculadoraCODTest {
      * Test of realizaOperacion method, of class CalculadoraCOD.
      */
     @Test
-    public void testRealizaOperacion() {
+    public void testRealizaSuma() {
         
         // TODO review the generated test code and remove the default call to fail.
         
@@ -64,8 +64,56 @@ public class CalculadoraCODTest {
         mod.num1=1;
         mod.num2 = 1;
         mod.operacion = "suma";
-        CalculadoraCOD.realizaOperacion(mod);
-        double result = mod.resultado;
+        
+        double result = CalculadoraCOD.realizaOperacion(mod);
+        assertEquals(expectedResult,result,0.0);
+        //fail("The test case is a prototype.");
+    }
+    @Test
+    public void testRealizaResta() {
+        
+        // TODO review the generated test code and remove the default call to fail.
+        
+        double expectedResult =0;
+        
+        Modelo mod = new Modelo();
+        mod.num1=1;
+        mod.num2 = 1;
+        mod.operacion = "resta";
+        
+        double result = CalculadoraCOD.realizaOperacion(mod);
+        assertEquals(expectedResult,result,0.0);
+        //fail("The test case is a prototype.");
+    }
+    @Test
+    public void testRealizaMultiplicacion() {
+        
+        // TODO review the generated test code and remove the default call to fail.
+        
+        double expectedResult =1;
+        
+        Modelo mod = new Modelo();
+        mod.num1=1;
+        mod.num2 = 1;
+        mod.operacion = "multiplicacion";
+        
+        double result = CalculadoraCOD.realizaOperacion(mod);
+        assertEquals(expectedResult,result,0.0);
+        //fail("The test case is a prototype.");
+    }
+    @Test
+    public void testRealizaDivision() {
+        
+        // TODO review the generated test code and remove the default call to fail.
+        
+        double expectedResult =1;
+        
+        Modelo mod = new Modelo();
+        mod.num1=1;
+        mod.num2 = 1;
+        mod.operacion = "division";
+        
+        double result = CalculadoraCOD.realizaOperacion(mod);
         assertEquals(expectedResult,result,0.0);
         //fail("The test case is a prototype.");
     }
