@@ -60,33 +60,33 @@ public class CalculadoraCOD {
         
     }
     
-    public static void realizaOperacion(Modelo cont){
+    public static double realizaOperacion(Modelo cont){
     
         
         if ( cont.operacion.equals("suma")){
         
             cont.resultado = cont.num1 + cont.num2;
-
+            return cont.resultado;
         
         }else if( cont.operacion.equals("resta")){
         
             cont.resultado = cont.num1 - cont.num2;
+            return cont.resultado;
 
-        
         }else if(cont.operacion.equals("multiplicacion")){
         
             cont.resultado = cont.num1 * cont.num2;
-
+            return cont.resultado;
         
         }else if (cont.operacion.equals("division")){
         
             cont.resultado = cont.num1 / cont.num2;
+            return cont.resultado;
 
-        
         }else{
         
             JOptionPane.showMessageDialog(null, "Introduzca solo: \n suma | resta | multiplicacion | division");
-            
+            return cont.resultado =0;
         }
     
         
